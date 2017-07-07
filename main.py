@@ -26,6 +26,7 @@ class Browser:
             time.sleep(QUIT_DELAY)
         else:
             print("[{}] LOG IN SUCESSFUL, PREALLOCATIONS ARE OPEN".format(time_now))
+            login_btn.click()
             while True:
                 time.sleep(1)
 
@@ -56,4 +57,3 @@ if __name__ == '__main__':
     browser = Browser(SITE_URL)
     while True:
         browser.try_login(nusnet_id=credentials.LOGIN, password=credentials.PASSWORD)
-        browser.try_login(nusnet_id='nusstu/'+credentials.LOGIN, password=credentials.PASSWORD)
